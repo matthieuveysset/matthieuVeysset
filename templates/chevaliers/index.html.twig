@@ -4,6 +4,25 @@
 
 {% block body %}
     <h1>Les chevaliers</h1>
+    
+<div class="container row mt-4">
+    {% for chevalier in chevaliers %}
+        <div class="col-4 mt-4">
+            <div class="card">
+                <div class="card-body" style="text-align: center; line-height: 1vh;">
+                <div class="img-thumbnail">
+                    <img src="{{ chevalier.photo }}" alt="" style="width: 180px; height: 180px;">
+                </div>
+                    <h5 class="card-title mt-2">
+                    </h5>
+                    <p class="card-text">{{ chevalier.origine}}</p>
+                    <div class="text-primary" style="font-weight: thin; font-size: 1rem;">{{ chevalier.technique }}€</div>
+                </div>
+            </div>
+        </div>
+    
+    {% endfor %}
+</div>
 
 
 {% endblock %}

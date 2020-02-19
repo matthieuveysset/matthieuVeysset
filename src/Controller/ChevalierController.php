@@ -25,6 +25,7 @@ class ChevalierController extends AbstractController
         ]);
     }
 
+    
     /**
      * @Route("/new", name="chevalier_new", methods={"GET","POST"})
      */
