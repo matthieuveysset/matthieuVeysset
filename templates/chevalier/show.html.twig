@@ -3,7 +3,7 @@
 {% block title %}Chevalier{% endblock %}
 
 {% block body %}
-    <h1>Chevalier</h1>
+    <h1>{{ chevalier.nom }}</h1>
 
     <table class="table">
         <tbody>
@@ -17,7 +17,9 @@
             </tr>
             <tr>
                 <th>Photo</th>
-                <td>{{ chevalier.photo }}</td>
+                <div class="col-md-8">
+                    <img src="{{ chevalier.photo }}">
+                </div>
             </tr>
             <tr>
                 <th>Constellation</th>

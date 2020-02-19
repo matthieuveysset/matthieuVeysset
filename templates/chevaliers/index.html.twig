@@ -10,13 +10,17 @@
         <div class="col-4 mt-4">
             <div class="card">
                 <div class="card-body" style="text-align: center; line-height: 1vh;">
-                <div class="img-thumbnail">
-                    <img src="{{ chevalier.photo }}" alt="" style="width: 180px; height: 180px;">
+                <a href="{{ path('chevalier_show', {'id': chevalier.id}) }}" style="font-size:3rem;">{{chevalier.nom}}</a>
+                    <h5 class="card-title mt-2">
+                    </h5>
+                <div>
+                    <img src="{{ chevalier.photo }}" alt="">
                 </div>
                     <h5 class="card-title mt-2">
                     </h5>
-                    <p class="card-text">{{ chevalier.origine}}</p>
-                    <div class="text-primary" style="font-weight: thin; font-size: 1rem;">{{ chevalier.technique }}€</div>
+                    <p class="card-text">Origine: {{ chevalier.origine}}</p>
+                    <p class="card-text">Constellation de {{ chevalier.constellation}}</p>
+                    <div class="text-primary" style="font-weight: thin; font-size: 1rem;">{{ chevalier.technique }}</div>
                 </div>
             </div>
         </div>
