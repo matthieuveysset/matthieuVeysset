@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Chevalier{% endblock %}
+
+{% block body %}
+    <h1>Edit Chevalier</h1>
+
+    {{ include('chevalier/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('chevalier_index') }}">back to list</a>
+
+    {{ include('chevalier/_delete_form.html.twig') }}
+{% endblock %}

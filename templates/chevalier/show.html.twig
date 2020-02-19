@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chevalier{% endblock %}
+
+{% block body %}
+    <h1>Chevalier</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ chevalier.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ chevalier.nom }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ chevalier.photo }}</td>
+            </tr>
+            <tr>
+                <th>Constellation</th>
+                <td>{{ chevalier.constellation }}</td>
+            </tr>
+            <tr>
+                <th>Origine</th>
+                <td>{{ chevalier.origine }}</td>
+            </tr>
+            <tr>
+                <th>Technique</th>
+                <td>{{ chevalier.technique }}</td>
+            </tr>
+            <tr>
+                <th>Presentation</th>
+                <td>{{ chevalier.presentation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('chevalier_index') }}">back to list</a>
+
+    <a href="{{ path('chevalier_edit', {'id': chevalier.id}) }}">edit</a>
+
+    {{ include('chevalier/_delete_form.html.twig') }}
+{% endblock %}

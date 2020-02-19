@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chevalier index{% endblock %}
+
+{% block body %}
+    <h1>Chevalier index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Photo</th>
+                <th>Constellation</th>
+                <th>Origine</th>
+                <th>Technique</th>
+                <th>Presentation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for chevalier in chevaliers %}
+            <tr>
+                <td>{{ chevalier.id }}</td>
+                <td>{{ chevalier.nom }}</td>
+                <td>{{ chevalier.photo }}</td>
+                <td>{{ chevalier.constellation }}</td>
+                <td>{{ chevalier.origine }}</td>
+                <td>{{ chevalier.technique }}</td>
+                <td>{{ chevalier.presentation }}</td>
+                <td>
+                    <a href="{{ path('chevalier_show', {'id': chevalier.id}) }}">show</a>
+                    <a href="{{ path('chevalier_edit', {'id': chevalier.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('chevalier_new') }}">Create new</a>
+{% endblock %}
